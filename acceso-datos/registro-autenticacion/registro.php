@@ -16,7 +16,7 @@ class Registro{
     //logica para registrar estuidante
     public function R_estudiante($data){
 
-      //  var_dump($data);
+        var_dump($data);
 
         $insertar_estudiante=mysqli_query($this->conexion, 'insert into estudiante values('."null,"."'$data[0]','"."$data[1]','"."$data[2]');");
         
@@ -30,7 +30,7 @@ class Registro{
             //convirtiendo datos de consulta en array legible
             $res=mysqli_fetch_assoc($consulta_id);
 
-            //var_dump($res);
+            var_dump($res);
 
 
             //creando sesesion
