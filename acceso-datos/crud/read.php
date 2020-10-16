@@ -44,6 +44,14 @@
     break;
 
 
+    case 'buscar curso':
+
+
+     
+      require_once '../../acceso-datos/registro-autenticacion/conexion.php';
+
+    break;
+
     
     
     default:
@@ -61,6 +69,7 @@
    for ($i=0; $i < $cantidad; $i++) { 
        
     $miquery=mysqli_query($miconexion->Conectando(),$consultas[$i]);
+
 
     while($res= mysqli_fetch_assoc($miquery)){
 

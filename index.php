@@ -9,6 +9,9 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
       echo '<div class="alert alert-danger d-flex justify-content-center align-items-center">'.$_GET['error'].'</div>';
     }
     
+
+ 
+
     //datos necesarios para conectarse con crud
     $key=40030267;
     $misconsultas=array('select * from curso limit 3;');
@@ -21,6 +24,15 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
     //ver datos que llegan
    // var_dump($_POST['public']['read']);
     
+
+
+   //redirecciones
+     session_start();
+
+    if(isset($_SESSION['data']['rol']) && $_SESSION['data']['rol']==='estudiante'){
+
+    header('Location:presentacion/estudiante/index.php');
+   }
 
     
     function Imprimir_Cabecera(){
@@ -205,9 +217,9 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
 
       <p> SERVICIO NACIONAL DE APRENDIZAJE S.E.N.A.</p>
 
-      <br>
+        <br>
 
-     <p> PROYECTO LEARNING MANAGEMENT SISTEM <p/> <br>
+     <p> PROYECTO LEARNING MANAGEMENT SYSTEM <p/> <br>
 
       <p>TECNOLOGO ANALISIS Y DESARROLLO DE SISTEMAS DE INFORMACION</p><br> 
       
@@ -215,12 +227,11 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
                           
       
       
-                   <p>Desarrollado por Jose David Castañeda Pira</p><br>
+                   <p>DESARROLLADO POR: JOSE DAVID CASTAÑEDA PIRA</p><br>
 
                    </div>
 
       </footer>
-      
 
     <!--link librerias js-->
     <script src="librerias/jquery/jquery-3.5.1.js"></script>

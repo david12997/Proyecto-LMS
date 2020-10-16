@@ -40,7 +40,11 @@ class ConexionDB{
 
 }
 
-
+//credenciales produccion
 $miconexion= new ConexionDB('localhost','u418177199_david','5719326David','u418177199_lms');
+
+//credenciales desarrollo
+//$miconexion= new ConexionDB('localhost','root','5719326david','lms');
+
 //USANDO LA VARIABLE $miconexion SE INSTANCIA EL METODO CONECTANDO 
 
