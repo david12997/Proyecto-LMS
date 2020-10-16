@@ -1,0 +1,16 @@
+{
+    "Interfaces graficas":{
+
+        "bootstrap": "v4.5 o superior",
+        "jquery":"v3.5.1 o superior",
+        "font-awesome":"5 o superior"
+
+    },
+   "servidor":{
+
+        "php":"v7.4.3 o superior",
+        "sistema operativo":"ubuntu server v20.04.4, elsistema funciona sobre cualquier version de linux ubuntu",
+        "mysql":"v8.0.1 o superior",
+        "servidor web": "apache2"
+    }
+}

@@ -1,0 +1,89 @@
+
+/*estilos generales*/
+.fondoblanco{
+    background: white;
+}
+.fondo-negro{
+    background: black;
+}
+
+.fondo-verde{
+    background:rgb(25, 112, 33);
+    color: white;
+
+}
+
+.letrablanca{
+    color: white;
+    cursor: pointer;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer{
+    width: 100%;
+    height: 400px;
+    color: white;
+}
+
+input{
+    width: 70%;
+}
+
+
+
+
+/*logo principal*/
+#logo{
+    width: 150px;
+    height: 100px;
+}
+
+/*contenedor de los formularios*/
+.cont-form-ingresar, .cont-form-registrarse{
+
+    position: absolute;
+    width: 600px;
+}
+
+/*formulario y btn cerrar form*/
+
+.cerrar-formulario{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+.icono-cerrar-form{
+    color: red;
+    font-size: 35px;
+}
+
+/*icon check texto principal*/
+.check{
+    font-size: 30px;
+    color: rgb(25, 112, 33);
+}
+
+/*titulo curso*/
+.titulo-curso{
+    width: 80%;
+}
+
+
+/*contenedor de los cursos*/
+.contenedor-iconos{
+    width: 100%;
+    background: rgba(168, 168, 168, 0.562);
+   overflow-x: scroll;
+}
+
+/*cntenedor registro admin y profesor*/
+.contenedor-forms-admin{
+    width: 30%;
+    border-radius: 20px;
+}
+
+.contenedor-footer {
+    margin-left: 100px;
+}
