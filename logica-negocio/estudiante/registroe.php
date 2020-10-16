@@ -69,7 +69,7 @@ if(isset($_POST['rol-estudiante']) && isset($_POST['nombre-estudiante']) && isse
     $validacion=new ValidacionRegistro($_POST['rol-estudiante'], $_POST['nombre-estudiante'], $_POST['correo-estudiante'],$_POST['contraseña-estudiante']);
     $validacion->Validar();
 }else{
-    var_dump('Error no existen las variables post');
+  header('location:../../index.php?erro=Error en las datos de entrada intentalo en 5 minutos')
 }
 
 ?>
