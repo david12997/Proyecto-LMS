@@ -346,7 +346,7 @@ ALTER TABLE `estudiante`
   MODIFY `id_estudiante` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `maestro`
+-- AUTO_INCREMENT de la tabla `maestro ------`
 --
 ALTER TABLE `maestro`
   MODIFY `id_maestro` int NOT NULL AUTO_INCREMENT;
@@ -390,6 +390,9 @@ ALTER TABLE `curso_maestro`
   ADD CONSTRAINT `fk_curso_m` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`),
   ADD CONSTRAINT `fk_maestro_curso` FOREIGN KEY (`id_maestro`) REFERENCES `maestro` (`id_maestro`);
 COMMIT;
+
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
