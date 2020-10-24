@@ -1,0 +1,30 @@
+.logo{
+
+    width: 170px;
+    height: 100px;
+}
+
+.crear-curso{
+
+    position: fixed;
+    width: 80%;
+    height: 70vh;
+    overflow-y: scroll;
+    z-index: 9999;
+
+}
+footer{
+
+    width: 100%;
+    height: 400px;
+}
+
+.boton-cerrar{
+
+    font-size: 35px;
+    color: red;
+}
+.l-blanca{
+    color: white;
+    font-size: 26px;
+}

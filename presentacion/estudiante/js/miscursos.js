@@ -12,7 +12,6 @@ $(window).on('load',function () {
 
 
         <a href="miscursos.php" class="btn btn-success btn-block"><h4>Mis cursos</h4></a>
-        <a href="miscursos.php" class="btn btn-success btn-block"><h4>Mis datos</h4></a>
         <a href="../../logica-negocio/cerrar-sesion.php" class="btn btn-danger btn-block"><h4>Cerrar sesion</h4></a>
 
         </div>

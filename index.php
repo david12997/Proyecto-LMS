@@ -1,5 +1,6 @@
 <?php
 
+
 include_once 'librerias/propias/mostrar-errores.php';//errores de php
 
 
@@ -155,10 +156,87 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
 
     function Imprimir_cierre(){
 
+
+      echo '
+      
+      </div>
+      </div>
+
+
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+      <div class="container p-2 d-flex flex-wrap">
+      
+      <div class="btn btn-block btn-success m-2 mb-5"><h3>CLASES, TUTORIAS Y MÁS</h3></div>
+          
+
+
+
+      <div class="card m-4 mr-5 mt-3" style="width: 18rem;">
+      <img src="../../assets/img/clases.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item"><h5 class="card-title">Clases privadas presenciales</h5></li>
+      <li class="list-group-item">         <p class="card-text">Clases presenciales PRIVADAS en cualquier area del conocimiento como: Ingles, Matematicas, Fisica, Quimica, etc...</p>
+      </li>
+      <li class="list-group-item"><a href="#" class="btn btn-block btn-primary">Programar Clase</a></li>
+      </ul>
+        
+        
+      </div>
+    </div>
+
+
+
+
+
+    <div class="card m-4 mt-3" style="width: 18rem;">
+    <img src="../../assets/img/tutorias.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h5 class="card-title">Clases privadas virtuales</h5></li>
+    <li class="list-group-item"><p class="card-text">Clases virtuales PRIVADAS en cualquier area del conocimiento como: Ingles, Matematicas, Fisica, Quimica, etc...</p>
+    </li>
+    <li class="list-group-item"><a href="#" class="btn btn-block btn-primary">Programar Clase</a></li>
+    </ul>
+      
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="card m-4 mt-3" style="width: 18rem;">
+  <img src="../../assets/img/respuestas.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item"><h5 class="card-title">Resuelve talleres, problemas y ejercicos</h5></li>
+  <li class="list-group-item"><p class="card-text">Tomale una foto o escanea tu taller o ejercicio, nosotros te ayudamos a resolverlo y te enviamos las respuestas en tiempo record</p>
+  </li>
+  <li class="list-group-item"><a href="#" class="btn btn-block btn-primary">Resolver taller o ejercico</a></li>
+  </ul>
+    
+    
+  </div>
+</div>
+
+
+    
+      </div>
+      
+      
+      
+      ';
+
       echo'
 
-      </div>
-      </div>
 
 
 

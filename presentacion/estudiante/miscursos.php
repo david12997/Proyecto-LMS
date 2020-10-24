@@ -5,7 +5,7 @@ include_once '../../librerias/propias/mostrar-errores.php';
     //inicio de sesion y limpieza de variaable
     session_start();
     unset($_SESSION['data']['read']);
-    //var_dump($_SESSION);
+    //var_dump($_SESSION['data']);
 
 
 
@@ -56,13 +56,19 @@ include_once '../../librerias/propias/mostrar-errores.php';
       echo '<div class="alert alert-warning d-flex justify-content-center align-items-center">'.$_GET['inscripcion'].'</div>';
     }
     
+    //borrar cursos de estudiante
+    if(isset($_GET['delete'])){
+
+      echo '<div class="alert alert-warning d-flex justify-content-center align-items-center">'.$_GET['delete'].'</div>';
+
+    }
 
 
 
 
     //imprimir interfaz grafica miscursos
       Imprimir_Cabecera();
-      Imprimir_curso_estudiante($_SESSION['data']['miscursos']);
+      Imprimir_curso_estudiante($_SESSION['data']['miscursos'],$_SESSION['data']['id']);
       Imprimir_cierre();
 
 

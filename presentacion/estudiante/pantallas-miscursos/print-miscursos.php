@@ -1,6 +1,6 @@
 <?php
 
-function Imprimir_curso_estudiante($data){
+function Imprimir_curso_estudiante($data, $estudiante){
 
     for ($i=0; $i <count($data) ; $i++) { 
         
@@ -15,7 +15,7 @@ function Imprimir_curso_estudiante($data){
     <h5 class="card-title">'.$data[$i]['nombre'].'</h5>
     <p class="card-text">'.$data[$i]['descripcion_curso'].'</p>
     <a href="#" class="btn btn-success btn-block">Acceder</a>
-    <a href="#" class="btn btn-danger btn-block">Eliminar curso</a>
+    <a href="../../logica-negocio/estudiante/borrar-curso.php?curso='.$data[$i]['id_curso'].'&estudiante='.$estudiante.'" class="btn btn-danger btn-block">Eliminar curso</a>
     </div>
 </div>
 
