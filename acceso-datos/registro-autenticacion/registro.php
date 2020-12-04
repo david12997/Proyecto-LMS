@@ -55,6 +55,12 @@ class Registro{
     
     }
 
+    //logica para registrar maestro
+    public function R_maestro($data){
+
+        var_dump($data);
+
+    }
 
 
     //definir que tipo de usuario se va a registrar
@@ -65,19 +71,23 @@ class Registro{
                 
                 $this->R_estudiante($data);
                 
-                break;
+            break;
 
             case 'maestro':
-                # code...
-                break;
+               
+                $this->R_maestro($data);
+                
+            break;
                 
             case 'administracion':
                 # code...
-                break;        
+                
+            break;        
             
             default:
                 # code...
-                break;
+                
+            break;
         }
     }
 

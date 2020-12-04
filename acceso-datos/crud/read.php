@@ -55,7 +55,7 @@
     
     
     default:
-      # code...
+      $data_read='Error en la ubicacion del archivo conexion.php';
     break;
   }
 

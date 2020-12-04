@@ -16,6 +16,18 @@ include_once '../../librerias/propias/mostrar-errores.php';
     if(isset($_SESSION['data']['rol']) && $_SESSION['data']['rol']==='estudiante'){
 
 
+      //mostrar respuestas satisfactorias del sistema
+      if(isset($_GET['success'])){
+
+        echo '<div class="alert alert-success d-flex justify-content-center">'.$_GET['success'].'</div>';
+      }
+
+      //mostrar respuestas fallidas del sistema
+      if(isset($_GET['error'])){
+
+        echo '<div class="alert alert-success d-flex justify-content-center">'.$_GET['error'].'</div>';
+      }
+
 
 
 

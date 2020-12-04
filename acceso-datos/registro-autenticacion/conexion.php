@@ -41,10 +41,12 @@ class ConexionDB{
 }
 
 //credenciales produccion
-$miconexion= new ConexionDB('localhost','u418177199_david','5719326David','u418177199_lms');
+//$miconexion= new ConexionDB('localhost','u418177199_david','5719326David','u418177199_lms');
 
 //credenciales desarrollo
-//$miconexion= new ConexionDB('localhost','root','5719326david','lms');
+$miconexion= new ConexionDB('5.181.218.103','u418177199_david','5719326David','u418177199_lms');
+
+//var_dump('estoy incluido');
 
 //USANDO LA VARIABLE $miconexion SE INSTANCIA EL METODO CONECTANDO 
 
