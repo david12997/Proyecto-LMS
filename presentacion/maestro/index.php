@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-<<<<<<< HEAD
-if(isset($_SESSION['data']['rol']) && $_SESSION['data']['rol']==='maestro'){
 
-    var_dump('interfaz maestro');
-}
-=======
 if(isset($_SESSION['data']) && $_SESSION['data']['rol']==='maestro'){
 
     
@@ -34,4 +29,4 @@ else{
 }
 
 ?>
->>>>>>> 10ea440ad67d17dfba5e1f856e6b09e09d1c34a8
+
