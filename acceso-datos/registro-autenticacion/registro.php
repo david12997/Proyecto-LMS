@@ -30,7 +30,7 @@ class Registro{
             //convirtiendo datos de consulta en array legible
             $res=mysqli_fetch_assoc($consulta_id);
 
-            var_dump($res);
+           // var_dump($res);
 
 
             //creando sesesion
@@ -55,12 +55,64 @@ class Registro{
     
     }
 
-    //logica para registrar maestro
-    public function R_maestro($data){
 
-        var_dump($data);
 
+
+
+    public function R_maestro($data)
+    {
+
+        //insertando maestro
+        $insertar_maestro=mysqli_query($this->conexion,'insert into maestro values( null,'."'$data[0]',"."'$data[1]',"."'$data[2]');");
+
+        
+        //verificando inserccion
+        if($insertar_maestro){
+
+           //redirigiendo pagina inicio administrador
+           header('Location:../../presentacion/administrador/index.php?create_user=Usuario creado correctamente');
+
+
+
+
+
+
+        }else{
+            var_dump('error al insertar datos');
+        }
     }
+
+
+
+
+
+
+    public function R_admin($data)
+    {
+
+        //insertando administrador
+        $insertar_administrador=mysqli_query($this->conexion,'insert into administrador values( null,'."'$data[0]',"."'$data[1]',"."'$data[2]');");
+
+        
+        //verificando inserccion
+        if($insertar_administrador){
+
+           //redirigiendo pagina inicio administrador
+           header('Location:../../presentacion/administrador/index.php?create_user=Usuario A. creado correctamente');
+           
+
+
+
+
+
+        }else{
+            var_dump('error al insertar datos');
+        }
+    }
+
+
+
+
 
 
     //definir que tipo de usuario se va a registrar
@@ -73,14 +125,17 @@ class Registro{
                 
             break;
 
+
+
             case 'maestro':
-               
                 $this->R_maestro($data);
                 
             break;
+
                 
-            case 'administracion':
-                # code...
+            case 'administrador':
+
+                $this->R_admin($data);
                 
             break;        
             

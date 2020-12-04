@@ -1,50 +1,42 @@
 <?php
 
-    class Borrar{
+    class Delete {
 
-        public function __construct($tabla,$identificador,$condicion)
+        public $tabla ;
+        public $condicion;
+
+
+        public function __construct($tabla, $condicion)
         {
             $this->tabla=$tabla;
-            $this->id=$identificador;
             $this->condicion=$condicion;
         }
 
+        public function Borrando(){
 
-        public function Borrando()
-        {
+
+
             switch ($this->tabla) {
 
+                case 'curso_estudiante':
 
-                case 'curso_estudiante': //el arxivo conexion.php ya ha sido incluido a la rama principal que es eliminar-curso.php
-                    
-
-                   $miconexion2= new ConexionDB('5.181.218.103','u418177199_david','5719326David','u418177199_lms');
-                   //var_dump('delete  from '.$this->tabla.' '.$this->condicion);
-                //die();
-                   $query = mysqli_query($miconexion2->Conectando(),'delete from '.$this->tabla.' '.$this->condicion);
-                   if($query){
-
-                    $response=1;
-                   }else{
-
-                    $response=0;
-                   }
-                
+                    require_once '../../acceso-datos/registro-autenticacion/conexion.php';
+                    $query=  'delete from '.$this->tabla.' '.$this->condicion;
 
                 break;
                 
-
                 default:
-                
                     # code...
-                
                 break;
             }
 
-            return $response;
+            
+            $delete=mysqli_query( $miconexion->Conectando(),$query);
+            
+            return $delete;
+           
         }
 
-        
     }
 
 ?>

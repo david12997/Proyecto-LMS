@@ -92,7 +92,11 @@ $(window).on('load',function(){
             <h4>Maestro</h4>
         </div>
         <br>
+
         <form action="logica-negocio/maestro/autenticacion-m.php" method="POST">
+
+    
+
 
         <input type="text" class="d-none" name="rol-maestro" value="maestro">
 

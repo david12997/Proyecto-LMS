@@ -1,57 +1,21 @@
-/*estilos generales*/
-.fondoblanco{
-    background: white;
-}
-.letrablanca{
-    color: white;
-    cursor: pointer;
-}
-.letra-blanca-gris{
 
-    color: rgb(190, 187, 187);
-    cursor: pointer;
-}
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-footer{
-    width: 100%;
-    height: 400px;
-    color: white;
-}
+.logo{
 
-
-
-
-
-/*logo principal*/
-#logo{
-    width: 150px;
+    width: 170px;
     height: 100px;
 }
-
-.alert{
-
-    cursor: pointer;
+.l-blanca{
+    color: white;
+    font-size: 26px;
 }
 
+footer{
 
-
-/*navbar opciones*/
-
-.opciones{
-    position: absolute;
-    z-index: 9999;
-    width: 90%;
-    height: 250px;
-}
-.icono-cerrar{
-    font-size: 40px;
-    color: red;
+    width: 100%;
+    height: 400px;
 }
 
+form{
+    font-size: 28px;
 
-
-label, input{
-    font-size: 20px;
 }
