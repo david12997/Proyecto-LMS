@@ -43,9 +43,5 @@
     });
 
 
-    $('.descargar-datos').on('click',function(){
-
-        $('.contenido').empty();
-    })
 
 

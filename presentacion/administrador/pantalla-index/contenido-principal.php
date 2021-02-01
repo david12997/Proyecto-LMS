@@ -24,6 +24,8 @@ function Contenido_principal(){
     
     
     ';
+
+
 }
 
 ?>

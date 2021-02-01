@@ -23,17 +23,17 @@ function Nav_maestro($usuario, $rol){
 <!--navbar-->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"> <img class="logo" src="../../assets/img/logo-tutorias-final.png" alt=""></a>
+  <a class="navbar-brand" href="index.php"> <img class="logo" src="../../assets/img/logo-tutorias-final.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><h3>INICIO <i class="fas fa-home"></i></h3></span></a>
+        <a class="nav-link" href="index.php"><h3>INICIO <i class="fas fa-home"></i></h3></span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><h3>'.$usuario.'<i class="fas fa-user"></i></h3></a>
+      <li class="nav-item menu">
+        <div class="nav-link "><h3>'.$usuario.'<i class="fas fa-user"></i></h3></div>
       </li>
     </ul>
   </div>
@@ -44,8 +44,14 @@ function Nav_maestro($usuario, $rol){
     </div>
 </nav>
 <!--fin navbar-->
+
+
+<div class="contenedor-options p-2"></div>
     
     ';
+
+
 }
+
 
 ?>

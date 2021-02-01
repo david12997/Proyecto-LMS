@@ -45,7 +45,7 @@ class Autenticacion{
                             'rol'=>$this->rol,
                             'nombre'=>$res['nombre'],
                             'email'=>$this->usuario,
-                            'key'=>40030267
+                           
 
                         ];
 
@@ -70,7 +70,58 @@ class Autenticacion{
                     
                 }
 
-                break;
+            break;
+
+            case 'maestro':
+                
+                $consulta_contraseña='select id_maestro, contraseña, nombre from '.$this->rol.' where email="'.$this->usuario.'";';
+
+                $sacar_contraseña=mysqli_query($miconexion->Conectando(),$consulta_contraseña);
+
+                //verificacion consulta, autenticacion
+                if($sacar_contraseña){
+
+                    //convirtiendo datos de consulta en array legible
+                    $res=mysqli_fetch_assoc($sacar_contraseña);
+
+                    //comparando contraseñas 
+                    if(password_verify($this->contraseña,$res['contraseña'])){
+
+                        
+                        //inciando sesion
+                        session_start();
+
+                        $_SESSION['data']=[
+                            
+                            'id'=> $res['id_maestro'],
+                            'rol'=>$this->rol,
+                            'nombre'=>$res['nombre'],
+                            'email'=>$this->usuario
+
+                        ];
+
+                        //redirigiendo
+                        header('Location: ../../presentacion/maestro/index.php');
+
+                    }else{//error de autenticacion
+
+                        $error='Error de autenticacion, acceso denegado';
+                        header('Location:../../index.php?error='.$error);
+
+                    }
+
+                    
+
+                }else{//error de consulta
+
+                    //var_dump($consulta_contraseña);
+                   $error='error al autenticar usuario archivo autenticacion.php';
+                   header('Location:../../index.php?error='.$error);
+
+                    
+                }
+
+            break;
             
             default:
                 # code...

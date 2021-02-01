@@ -5,7 +5,7 @@ function Crear_curso(){
 
     echo'
     
-    <div class="crear-curso bg-dark m-5  d-none">
+    <div class="crear-curso bg-dark m-2 ml-5  d-none">
 
     <div class="btn-cerrar d-flex ">
 

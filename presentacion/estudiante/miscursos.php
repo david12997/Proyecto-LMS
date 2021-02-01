@@ -32,18 +32,17 @@ include_once '../../librerias/propias/mostrar-errores.php';
 
 
     require_once '../../logica-negocio/autorizacion-crud.php';
-    if($_SESSION['data']['rol']==='estudiante' && $_SESSION['data']['key']===40030267){
+    if($_SESSION['data']['rol']==='estudiante' ){
 
 
 
-      $key=$_SESSION['data']['key'];//esta es la clave para poder acceder al crud
-
+     
       $query='select c.nombre, c.ruta_icono, c.descripcion_curso, x.id_curso from curso c, curso_estudiante x where x.id_curso=c.id_curso and x.id_estudiante='.$_SESSION['data']['id'].';';
       $mis_consultas=array($query);//aqui estan las consultas sql necesarias para esta vista
 
 
 
-      $crud_aut=new Autorizacion_crud($key,$mis_consultas,'curso estudiante');//conectandose al crud 
+      $crud_aut=new Autorizacion_crud('',$mis_consultas,'curso estudiante');//conectandose al crud 
       $crud_aut->Autorizar(count($mis_consultas));
 
      

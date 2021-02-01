@@ -1,13 +1,13 @@
 <?php
 
 //$consultas es un array
- function Read($consultas,$cantidad,$location){
+ function Read($consultas,$cantidad,$caso){
 
   $data_read=array();
 
 
 
-  switch ($location) {//aqui se verifica que ruta se necesita, esto depende del archivo donde se incluya read
+  switch ($caso) {//aqui se verifica que ruta se necesita, esto depende del archivo donde se incluya read
 
     case 'index estudiante':
 
@@ -52,6 +52,24 @@
 
     break;
 
+    case 'componente id_curso':
+
+
+     
+      require_once '../../acceso-datos/registro-autenticacion/conexion.php';
+
+    break;
+
+
+    case 'ver curso maestro':
+
+
+     
+      require_once '../../acceso-datos/registro-autenticacion/conexion.php';
+
+    break;
+
+    
     
     
     default:

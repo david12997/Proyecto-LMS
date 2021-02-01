@@ -1,6 +1,6 @@
 <?php
 
-    function Footer(){
+    function Footer($script){
 
         echo '
         
@@ -14,7 +14,7 @@
         <script src="../../librerias/jquery/jquery-3.5.1.js"></script>
         <script src="../../librerias/bootstrap/js/bootstrap.min.js"></script>
         <script src="../../librerias/icons/js/all.js"></script>
-        <script src="js/index.js"></script>
+        '.$script.'
     </body>
     </html>
 

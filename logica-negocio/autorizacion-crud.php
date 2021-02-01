@@ -26,7 +26,7 @@ class Autorizacion_crud{
     public function Autorizar($catidad_consultas)
     {
 
-        if($this->clave===40030267){
+      
 
 
             switch ($this->accion) {//las diferentes acciones permiten definir la ruta correcta para el archivo read.php
@@ -63,12 +63,6 @@ class Autorizacion_crud{
             
 
 
-        }else{
-            session_destroy();
-            $error='error de autorizacion en el sistema, vuelve a iniciar sesion';
-            header('Location:../../index.php');
-            
-        }
     }
 }
 

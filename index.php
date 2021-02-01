@@ -1,7 +1,7 @@
 <?php
 
 
-include_once 'librerias/propias/mostrar-errores.php';//errores de php
+
 
 
     //mostrando errores
@@ -14,16 +14,16 @@ include_once 'librerias/propias/mostrar-errores.php';//errores de php
  
 
     //datos necesarios para conectarse con crud
-    $key=40030267;
+    
     $misconsultas=array('select * from curso limit 3;');
 
     //instanciando autorizacion para conectarse a crud
     require_once 'logica-negocio/autorizacion-crud.php';
-    $crud_aut= new Autorizacion_crud($key,$misconsultas,'read public');
+    $crud_aut= new Autorizacion_crud('',$misconsultas,'read public');
     $crud_aut->Autorizar(count($misconsultas));
 
     //ver datos que llegan
-   // var_dump($_POST['public']['read']);
+    //var_dump($_POST['public']['read']);
     
 
 

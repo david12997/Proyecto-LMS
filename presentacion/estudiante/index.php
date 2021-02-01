@@ -2,6 +2,7 @@
 
 include_once '../../librerias/propias/mostrar-errores.php';
 session_start();
+//var_dump($_SESSION);
 
 
 if(isset($_SESSION['data'])){//autenticacion
@@ -11,19 +12,18 @@ if(isset($_SESSION['data'])){//autenticacion
 
 
     require_once '../../logica-negocio/autorizacion-crud.php';
-    if($_SESSION['data']['rol']==='estudiante' && $_SESSION['data']['key']===40030267){
+    if($_SESSION['data']['rol']==='estudiante'){
 
 
 
-      $key=$_SESSION['data']['key'];//esta es la clave para poder acceder al crud
       $mis_consultas=array('select*from curso where estado="ok";');//aqui estan las consultas sql necesarias para esta vista
 
 
 
-      $crud_aut=new Autorizacion_crud($key,$mis_consultas,'read estudiante');//conectandose al crud 
+      $crud_aut=new Autorizacion_crud('',$mis_consultas,'read estudiante');//conectandose al crud 
       $crud_aut->Autorizar(count($mis_consultas));
 
-      //var_dump($_SESSION['data']);
+     // var_dump($_SESSION['data']['read']);
     }
 
 
